@@ -17,88 +17,95 @@
         <section id="background">
             <img id="cloud1" src="/assets/images/cloud1.png" alt="pixelCloud1">
             <img id="cloud2" src="/assets/images/cloud2.png" alt="pixelCloud2">
+            <img id="grass" src="/assets/images/grass.png" alt="grassBG">
         </section>
             <section id="chooseChar">
                 <article id ="char1">
-                    <h2>Player's 1 character</h2>
+                    <h2 class="titleChoose">Player's 1 character</h2>
                     <form id ="form1" action="">
-                        <label for="race">Choose your race</label>
-                        <select name="race" id="race1">
+                        <label class="margpadform" for="race">Choose your race</label>
+                        <select class="margpadform" name="race" id="race1">
                             <option value="human">Human</option>
                             <option value="elve">Elve</option>
                             <option value="orc">Orc</option>
                             <option value="vampire">Vampire</option>
                         </select>
-                        <label for="items">Choose your weapon</label>
-                        <select name="items" id="item1">
+                        <label class="margpadform" for="items">Choose your weapon</label>
+                        <select class="margpadform" name="items" id="item1">
                             <option value="sword">Excalibur</option>
                             <option value="staff">The Wabbajack</option>
                             <option value="boots">7-League Boots</option>
                             <option value="bow">Appolo's bow</option>
                         </select>
-                        <label for="nameChar1">Name your hero</label>
-                        <input id="nameChar1" type="text">
+                        <label class="margpadform" for="nameChar1">Name your hero</label>
+                        <input class="margpadform" id="nameChar1" type="text">
                     </form>
                 </article>
                 <article id ="char2">
-                    <h2>Player's 2 character</h2>
+                    <h2 class="titleChoose">Player's 2 character</h2>
                         <form id="form2" action="">
-                            <label for="race">Choose your race</label>
-                            <select name="race" id="race2">
+                            <label class="margpadform" for="race">Choose your race</label>
+                            <select class="margpadform" name="race" id="race2">
                                 <option value="human">Human</option>
                                 <option value="elve">Elve</option>
                                 <option value="orc">Orc</option>
                                 <option value="vampire">Vampire</option>
                             </select>
-                            <label for="items">Choose your weapon</label>
-                            <select name="items" id="item2">
+                            <label class="margpadform" for="items">Choose your weapon</label>
+                            <select class="margpadform" name="items" id="item2">
                                 <option value="sword">Galatine</option>
                                 <option value="staff">Jaina's staff</option>
                                 <option value="boots">Herme's Talaria</option>
                                 <option value="bow">Loki's Holy Dart</option>
                             </select>
-                            <label for="nameChar2">Name your hero</label>
-                            <input id="nameChar2" type="text">
+                            <label class="margpadform" for="nameChar2">Name your hero</label>
+                            <input class="margpadform" id="nameChar2" type="text">
                         </form>
                 </article>
-                <button id="encu">Ready to Fight</button>
+                <button id="start">Ready to Fight</button>
             </section>  
         <section id="opponents1">
-            <article>
+            <article id="carac1">
                 <img id="img1" src="" alt="">
                 <h2>Type de perso</h2>
                     <p id="perso1"></p>
                 <h2>Nom</h2>
                     <p id="name1"></p>
                 <h2>Items</h2>
-                    <p id="item1"></p>
+                    <p id="items1"></p>
                 <h2>Vie</h2>
                     <p id="vie1"></p>
             </article>
-            <button id ="attack1" class="op1">Attack</button>
-            <button class="op1">Heal</button>
-            <button class="op1">Yield</button>
         </section>
      
         <section id="opponents2">
-            <article>
+            <article id="carac2">
                 <img id="img2" src="" alt="">
                 <h2>Type de perso</h2>
                     <p id="perso2"></p>
                 <h2>Nom</h2>
                     <p id="name2"></p>
                 <h2>Items</h2>
-                    <p id="item2"></p>
+                    <p id="items2"></p>
                 <h2>Vie</h2>
                     <p id="vie2"></p>
             </article>
-            <button class="op2">Attack</button>
-            <button class="op2">Heal</button>
-            <button class="op2">Yield</button>
         </section>
-        <section id="log">
-            <h2>Recap</h2>
-            <p>What has been done?</p>
+        <section id="logCommand">
+            <article id="button1" class="buttons">
+                <button id ="attack1" class="op1">Attack</button>
+                <button class="op1">Heal</button>
+                <button class="op1">Yield</button>
+            </article>
+            <article id="button2" class="buttons">
+                <button class="op2">Attack</button>
+                <button class="op2">Heal</button>
+                <button class="op2">Yield</button>
+            </article>
+            <article id="log">
+                <h2>Recap</h2>
+                <p>What has been done?</p>
+            </article> 
         </section>
     </main>
     <script src="js/character.js"></script>
