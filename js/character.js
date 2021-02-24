@@ -14,9 +14,9 @@ var sword = attack * 1.3;
 
 // **** VAR RECUPERATION ****
 // ** Joueur 1 **
-var name1 = document.getElementById("form1").nameChar1.value;
-var race1 = document.getElementById("form1").race.value;
-var item1 = document.getElementById("form1").items.value;
+var name1 = document.getElementById("nameChar1").value;
+var race1 = document.getElementById("race1").value;
+var item1 = document.getElementById("item1").value;
 
 // ** Joueur 2 **
 var name2 = document.getElementById("form2").nameChar2.value;
@@ -79,8 +79,13 @@ var char1 = {
 
 // **** PERSONNAGE 2 ****
 
+function test(){
+    console.log(name1);
+    console.log(item1);
+    console.log(race1);
+}
+
 document.getElementById("start").addEventListener("click",()=>{
     x = document.getElementById("chooseChar").style.display = "none";
-    console.log(vampire);
-    console.log(humain);
+    console.log(test());
 })
