@@ -1,0 +1,189 @@
+/* Ajout d'une GRID 4 par 4 de taille égale */
+
+@mixin grid4by4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+/* ==============
+    Typography
+================ */
+
+@font-face {
+    font-family: "bitmapPix";
+    src: url(/assets/fonts/bitmapPix.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =========
+    Global
+========== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include grid4by4();
+    font-family: 'bitmapPix', sans-serif;
+    color: white;
+}
+
+main {
+    @include grid4by4();
+    height: 100vh;
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+
+    h1 {
+        grid-column: 2 / 4;
+        grid-row: 1/ 2;
+        justify-self: center;
+        margin: 50px;
+        z-index: 1;
+    }
+}
+
+/* ===================
+   Background style
+===================== */
+
+main {
+    background: linear-gradient(#92A7FD, #B9DBFD);
+}
+
+#background {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1 /2;
+    grid-column: 1 / 5;
+}
+
+#cloud1 {
+    grid-column: 3 / 3;
+    width: 45%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+    animation: cloud1 150s linear infinite alternate;
+}
+
+@keyframes cloud1 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(-1500px)
+    }
+}
+
+#cloud2 {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    width: 45%;
+    height: auto;
+    position: relative;
+    z-index: 0;
+    animation: cloud2 150s linear infinite alternate;
+}
+
+@keyframes cloud2 {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(1500px)
+    }
+}
+
+/* =========================
+   Style création de perso
+========================== */
+
+#chooseChar {
+    @include grid4by4();
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.721);
+    grid-column: 1 / 5;
+    grid-row: 1 / 5;
+    z-index: 2;
+
+    h2 {
+        color: white;
+    }
+
+    #char1 {
+        @include grid4by4();
+        grid-column: 1 / 3;
+        grid-row: 1 / 5;
+
+        h2 {
+            grid-column: 1 / 5;
+            grid-row: 1 / 2;
+            justify-self: center;
+        }
+
+        form {
+            grid-column: 1 / 5;
+            grid-row: 2 / 5;
+        }
+
+    }
+
+    #char2 {
+        @include grid4by4();
+        grid-column: 3 / 5;
+        grid-row: 1/ 5;
+
+        h2 {
+            grid-column: 1 / 5;
+            grid-row: 1 / 2;
+            justify-self: center;
+        }
+
+        form {
+            grid-column: 1 / 5;
+            grid-row: 2 / 5;
+        }
+    }
+
+    #encu {
+        grid-column: 2 / 4;
+        grid-row: 4 / 5;
+        width: 120px;
+        height: 40px;
+    }
+
+}
+
+/* =========================
+   Style dispotion combat
+========================== */
+
+#opponents1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    z-index: 1;
+
+    h2 {
+        color: white;
+    }
+}
+
+label {
+    display: block;
+    color: white;
+}
+
+#oppponents2 {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    justify-self: right;
+}
