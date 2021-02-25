@@ -362,7 +362,7 @@ select {
   grid-column: 1 / 3;
   -ms-grid-column-align: left;
       justify-self: left;
-  padding-bottom: 20px;
+  padding-bottom: 210px;
 }
 
 #opponents2 {
@@ -389,7 +389,7 @@ select {
   -ms-grid-column-align: right;
       justify-self: right;
   text-align: right;
-  padding-bottom: 20px;
+  padding-bottom: 210px;
 }
 
 .detailChar {
