@@ -1,91 +1,98 @@
-// **** VAR COMBATS BASIC****
-var lifepoint = 200;
-var attack = randAttack();
-var heal = 15;
-var block = 10;
-// var magic = 100;
-// var dodge = 10;
+function Person(race,item, name){
+    this.race = race;
+    this.item = item;
+    this.name = name;
+    this.currenthealth = 100;
+    this.maxHealth = 100;
+    
+    this.min = 3;
+    this.maxDamage = 20;
+    this.maxHealing = 30;
 
-// **** VAR EQUIPEMENTS ****
-var staff = heal * 1.2;
-var sword = attack * 1.3;
-// var boots = dodge * 1.3;
-// var bow  = cc * 1.3;
+    this.heal = function(){};
 
-// **** VAR RECUPERATION ****
-// ** Joueur 1 **
-var name1 = document.getElementById("nameChar1").value;
-var race1 = document.getElementById("race1").value;
-var item1 = document.getElementById("item1").value;
+    this.damage = function (){
+        var attack = 0;
+        for (let i = 0; i <10; i++){
+          attack2 =  Math.floor((Math.random()*4)+5);
+          return attack; 
+        }
+    };
 
-// ** Joueur 2 **
-var name2 = document.getElementById("form2").nameChar2.value;
-var race2 = document.getElementById("form2").race.value;
-var item2 = document.getElementById("form2").items.value;
+    this.totalDamage = this.damage();
 
-// https://stackoverflow.com/questions/11552158/percentage-chance-of-saying-something/11552190 pourcentage de chance
-
-
-// **** FONCTIONS ****
-
-// ** Random attack **  
-function randAttack(){
-    var attack2 = 0;
-    for (let i = 0; i <10; i++){
-      attack2 =  Math.floor((Math.random()*4)+5);
-      return attack2; 
-    }
+    this.displayChar = function(){
+        return console.log(`I am ${this.name} from a group of ${this.race}s, I wield a mighty ${this.item}, my total health point are ${this.maxHealth}`);
+    };
 }
 
-//** Get values **
 
 
-
-// **** CLASSES DE PERSONNAGE ****  https://www.w3schools.com/js/js_objects.asp
-
-var humain = {
-    "type": "Human",
-    "lifepoints": lifepoint,
-    "attckdmg": randAttack(),
-    "blockdmg": block,
-}
-
-var elve = {
-    "type": "Elve",
-    "lifepoints": lifepoint,
-    "attckdmg": attack,
-    "blockdmg": block,
-}
-
-var orc = {
-    "type": "Orc",
-    "lifepoints": lifepoint * 1.4,
-    "attckdmg": attack,
-    "blockdmg": block,
-}
-
-var vampire = {
-    "type": "Vampire",
-    "lifepoints": lifepoint,
-    "attckdmg": attack,
-    "blockdmg": block, 
-}
-
-// **** PERSONNAGE 1 ****
-var char1 = {
-
-
-}
-
-// **** PERSONNAGE 2 ****
-
-function test(){
-    console.log(name1);
-    console.log(item1);
-    console.log(race1);
-}
+// **** Récupération et mise en place interface user ****
 
 document.getElementById("start").addEventListener("click",()=>{
-    x = document.getElementById("chooseChar").style.display = "none";
-    console.log(test());
+
+    x = document.getElementById("chooseChar").style.display = "none"; // Cache l'interface après la création
+
+    // ** Affiche dans l'interface les éléments encondés + crée un var new Person **
+    var name1 = document.getElementById("nameChar1").value;
+    document.getElementById("name1").innerHTML = name1;
+
+    var race1 = document.getElementById("race1").value;
+    var raceOOF = document.getElementById("race1");
+    var raceHTML = raceOOF.options[raceOOF.selectedIndex].text;
+    document.getElementById("perso1").innerHTML = raceHTML;
+
+    var item1 = document.getElementById("item1").value;
+    var itemOOF = document.getElementById("item1");
+    var itmHTML = itemOOF.options[itemOOF.selectedIndex].text;
+    document.getElementById("items1").innerHTML = itmHTML;
+
+    player1 = new Person(race1, item1, name1); // Crée la nouvelle Person avec le constructeur de classe
+    console.log(player1.displayChar());
+    
+    // ** Player 2 Display values + creation **
+    var name2 = document.getElementById("form2").nameChar2.value;
+    document.getElementById("name2").innerHTML = name2;
+
+    var race2 = document.getElementById("form2").race.value;
+    var raceOOF2 = document.getElementById("race2");
+    var raceHTML2 = raceOOF2.options[raceOOF2.selectedIndex].text;
+    document.getElementById("perso2").innerHTML = raceHTML2;
+
+    var item2 = document.getElementById("form2").items.value;
+    var itemOOF2 = document.getElementById("item2");
+    var itmHTML2 = itemOOF2.options[itemOOF2.selectedIndex].text;
+    document.getElementById("items2").innerHTML = itmHTML2;
+
+    player2 = new Person(race2, item2, name2);
+    console.log(player2.displayChar());
+
 })
+
+// **** Health Bar ****
+
+var player1Life = document.getElementById("hpLeft1");
+var player2Life = document.getElementById("hpLeft2");
+
+document.getElementById("attack1").addEventListener("click",()=>{
+        x = player1.currenthealth - 20;
+        player1Life.setAttribute("value", x)
+        player1.currenthealth = x;
+
+        if (x == 0){
+            alert("PLAYER 1 LOST HAHA, Press ok for the revenger");
+            window.location.reload();
+        }
+});
+
+document.getElementById("attack2").addEventListener("click",()=>{
+    y = player2.currenthealth - 20;
+    player2Life.setAttribute("value", y)
+    player2.currenthealth = y;
+
+    if (y == 0){
+        alert("PLAYER 2 LOST HAHA, Press ok for the revenger");
+        window.location.reload();
+    }
+});
