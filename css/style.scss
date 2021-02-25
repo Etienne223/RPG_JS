@@ -247,12 +247,12 @@ select {
     grid-column: 1 / 3;
     grid-row: 1 / 5;
     z-index: 1;
-    padding-bottom: 20px;
     margin: $marginChar;
 
     #carac1 {
         grid-column: 1 / 3;
         justify-self: left;
+        padding-bottom: 20px;
     }
 }
 
@@ -261,13 +261,13 @@ select {
     grid-column: 3 / 5;
     grid-row: 1 / 5;
     z-index: 1;
-    padding-bottom: 20px;
     margin: $marginChar;
 
     #carac2 {
         grid-column: 2 /3;
         justify-self: right;
         text-align: right;
+        padding-bottom: 20px;
     }
 }
 
