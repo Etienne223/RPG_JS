@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* Ajout d'une GRID 4 par 4 de taille égale */
 /* margin var */
-/* color var */
 /* ==============
     Typography
 ================ */
@@ -22,7 +21,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -171,8 +170,6 @@ main {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
-  -ms-grid-column-align: stretch;
-      justify-self: stretch;
 }
 
 #grass2 {
@@ -182,8 +179,6 @@ main {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
-  -ms-grid-column-align: stretch;
-      justify-self: stretch;
 }
 
 #grass3 {
@@ -193,8 +188,6 @@ main {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3 / 4;
-  -ms-grid-column-align: stretch;
-      justify-self: stretch;
 }
 
 /* =========================
@@ -434,37 +427,51 @@ progress::-webkit-progress-value {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4 / 5;
-  background-color: #fff4e2;
-  border: 10px grey groove;
   z-index: 1;
   -webkit-transform: translateY(275px);
           transform: translateY(275px);
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-transition: 200ms ease-in;
+  transition: 200ms ease-in;
 }
 
 #logCommand #button1 {
+  width: 100%;
+  height: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #fff4e2;
+  border: 10px grey groove;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
 }
 
 #logCommand #button2 {
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff4e2;
+  border: 10px grey groove;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 /4;
 }
 
 #logCommand #log {
+  width: 100%;
+  height: 100%;
+  background-color: #fff4e2;
+  border: 10px grey groove;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
   -ms-grid-row: 1;
   grid-row: 1 / 1;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin: 10px 10px 10px 10px;
-  color: green;
+  text-align: center;
+  color: black;
 }
 
 .buttons {
