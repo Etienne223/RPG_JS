@@ -403,7 +403,19 @@ select {
 }
 
 progress {
-  background-color: red;
+  margin-top: 10px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: rgba(160, 160, 160, 0.926);
+  border: 5px solid #9a9a1c;
+}
+
+progress::-webkit-progress-bar {
+  background-color: rgba(160, 160, 160, 0.926);
+}
+
+progress::-webkit-progress-value {
+  background-color: #e65656;
 }
 
 /* ===============
@@ -425,6 +437,10 @@ progress {
   background-color: #fff4e2;
   border: 10px grey groove;
   z-index: 1;
+  -webkit-transform: translateY(275px);
+          transform: translateY(275px);
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
 }
 
 #logCommand #button1 {

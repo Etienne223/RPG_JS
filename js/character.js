@@ -26,8 +26,6 @@ function Person(race,item, name){
     };
 }
 
-
-
 // **** Récupération et mise en place interface user ****
 
 document.getElementById("start").addEventListener("click",()=>{
@@ -38,10 +36,10 @@ document.getElementById("start").addEventListener("click",()=>{
     var name1 = document.getElementById("nameChar1").value;
     document.getElementById("name1").innerHTML = name1;
 
-    var race1 = document.getElementById("race1").value;
-    var raceOOF = document.getElementById("race1");
-    var raceHTML = raceOOF.options[raceOOF.selectedIndex].text;
-    document.getElementById("perso1").innerHTML = raceHTML;
+    var race1 = document.getElementById("race1").value; // Prends la valeur de Race du form HTML
+    var raceOOF = document.getElementById("race1"); // Permet de récup la valeur HTML correspondant à race1
+    var raceHTML = raceOOF.options[raceOOF.selectedIndex].text; // Prends la valeur HTML du form
+    document.getElementById("perso1").innerHTML = raceHTML; // Display la valeur HTML dans l'html
 
     var item1 = document.getElementById("item1").value;
     var itemOOF = document.getElementById("item1");
@@ -68,6 +66,8 @@ document.getElementById("start").addEventListener("click",()=>{
     player2 = new Person(race2, item2, name2);
     console.log(player2.displayChar());
 
+    logCommand.style.transform ="translateY(0px)";
+
 })
 
 // **** Health Bar ****
@@ -81,7 +81,7 @@ document.getElementById("attack1").addEventListener("click",()=>{
         player1.currenthealth = x;
 
         if (x == 0){
-            alert("PLAYER 1 LOST HAHA, Press ok for the revenger");
+            alert(`${player1.name} LOST HAHA, Press ok for the revenger`);
             window.location.reload();
         }
 });
@@ -92,7 +92,7 @@ document.getElementById("attack2").addEventListener("click",()=>{
     player2.currenthealth = y;
 
     if (y == 0){
-        alert("PLAYER 2 LOST HAHA, Press ok for the revenger");
+        alert(`${player2.name} LOST HAHA, Press ok for the revenger`);
         window.location.reload();
     }
 });

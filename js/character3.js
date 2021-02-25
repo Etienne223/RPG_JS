@@ -40,7 +40,6 @@ function randAttack(){
 //** Get values **
 
 
-
 // **** CLASSES DE PERSONNAGE ****  https://www.w3schools.com/js/js_objects.asp
 
 var humain = {
