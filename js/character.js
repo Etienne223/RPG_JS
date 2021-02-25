@@ -76,23 +76,23 @@ var player1Life = document.getElementById("hpLeft1");
 var player2Life = document.getElementById("hpLeft2");
 
 document.getElementById("attack1").addEventListener("click",()=>{
-        x = player1.currenthealth - player2.maxDamage;
-        player1Life.setAttribute("value", x)
-        player1.currenthealth = x;
+        x = player2.currenthealth - player1.maxDamage;
+        player2Life.setAttribute("value", x)
+        player2.currenthealth = x;
 
         if (x == 0){
-            alert(`${player1.name} LOST HAHA, Press ok to revenge`);
+            alert(`${player2.name} LOST HAHA, Press ok to revenge`);
             window.location.reload();
         }
 });
 
 document.getElementById("attack2").addEventListener("click",()=>{
-    y = player2.currenthealth - player1.maxDamage;
-    player2Life.setAttribute("value", y)
-    player2.currenthealth = y;
+    y = player1.currenthealth - player2.maxDamage;
+    player1Life.setAttribute("value", y)
+    player1.currenthealth = y;
 
     if (y == 0){
-        alert(`${player2.name} LOST HAHA, Press ok to revenge`);
+        alert(`${player1.name} LOST HAHA, Press ok to revenge`);
         window.location.reload();
     }
 });
