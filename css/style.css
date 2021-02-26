@@ -322,6 +322,10 @@ button:focus {
   outline: none;
 }
 
+button:disabled {
+  background-color: #858585;
+}
+
 select {
   font-family: inherit;
   padding: 5px 0 5px 0;
