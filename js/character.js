@@ -12,7 +12,8 @@ function Person(race,item, name){
     this.heal = function(){
         var heal= 0;
         for (let i = 0; i <10; i++){
-            heal =  Math.floor((Math.random()*4)+5);
+            heal =  Math.floor((Math.random()*this.maxHealing)+this.min);
+            console.log(heal);
             return heal; 
           }
     };
@@ -20,7 +21,8 @@ function Person(race,item, name){
     this.damage = function (){
         var attack = 0;
         for (let i = 0; i <10; i++){
-          attack =  Math.floor((Math.random()*4)+5);
+          attack =  Math.floor((Math.random()*this.maxDamage)+this.min);
+          console.log(attack);
           return attack; 
         }
     };
