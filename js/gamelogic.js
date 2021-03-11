@@ -304,13 +304,13 @@ function ending2(){
 function persoImg1(){
     document.getElementById("pixelChar1").style.visibility = "visible";
     if (player1.race == "human"){
-        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_human.gif")
+        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_human1.gif")
     } else if (player1.race == "elve"){
-        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_elve.gif")
+        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_elve1.gif")
     } else if (player1.race == "orc"){
-        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_orc.gif")
+        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_orc1.gif")
     } else if (player1.race == "vampire"){
-        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_vampire.gif")
+        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_vampire1.gif")
     }
 }
 
