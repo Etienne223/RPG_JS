@@ -304,25 +304,25 @@ function ending2(){
 function persoImg1(){
     document.getElementById("pixelChar1").style.visibility = "visible";
     if (player1.race == "human"){
-        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_human2.gif")
+        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_human.gif")
     } else if (player1.race == "elve"){
         document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_elve.gif")
     } else if (player1.race == "orc"){
-        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_orc2.gif")
+        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_orc.gif")
     } else if (player1.race == "vampire"){
-        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_vampire2.gif")
+        document.getElementById("pixelChar1").setAttribute("src", "assets/images/pixel_vampire.gif")
     }
 }
 
 function persoImg2(){
     document.getElementById("pixelChar2").style.visibility = "visible";
     if (player2.race == "human"){
-        document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_human2.gif")
+        document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_human.gif")
     } else if (player2.race == "elve"){
         document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_elve.gif")
     } else if (player2.race == "orc"){
-        document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_orc2.gif")
+        document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_orc.gif")
     } else if (player2.race == "vampire"){
-        document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_vampire2.gif")
+        document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_vampire.gif")
     }
 }
