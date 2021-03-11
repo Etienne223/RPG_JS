@@ -10,7 +10,8 @@ function Person(name,race,item){
     this.maxHealing = 30;
 
     this.heal = function(){
-        Math.floor(Math.random() * (this.maxHealing - this.min) + this.min);
+       var x = Math.floor(Math.random() * (this.maxHealing - this.min) + this.min);
+       return x;
     };
 
     this.damage = function(){
