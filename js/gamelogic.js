@@ -30,7 +30,7 @@ function raceModHE1(){
     } else if (player2.race == "elve"){
         var rand = Math.random();
         var rounded = Math.round(rand * 10) / 10;
-        if (rounded > 0.3){
+        if (rounded < 0.2){
         console.log("Dodge");
         player1.currenthealth = player1.currenthealth - (damageDone1 / 2);
         damageDone1 = 0;   
@@ -48,7 +48,7 @@ function raceModHE2(){
     } else if(player2.race == "elve"){
         var rand = Math.random();
         var rounded = Math.round(rand * 10) / 10;
-        if (rounded > 0.3){
+        if (rounded < 0.2){
             console.log("Dodge");
             player2.currenthealth = player2.currenthealth - (damageDone2 / 2);
             damageDone2 = 0;   
