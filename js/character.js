@@ -31,4 +31,5 @@ document.getElementById("start").addEventListener("click",()=>{
     logCommand.style.transform ="translateY(0px)"; // Slide les boutons vers le haut
     newPlayer1();
     newPlayer2();
+    musicBattle();
 })

@@ -205,6 +205,7 @@ function newPlayer2(){
 // ***** FUNCTION BOUTON D'ATTAQUE *****
 
 document.getElementById("attack1").addEventListener("click", () => {
+    clickSound();
     itemMod1();
     raceModHE1();
     newLife = player2.currenthealth - damageDone1;
@@ -218,13 +219,13 @@ document.getElementById("attack1").addEventListener("click", () => {
 })
 
 document.getElementById("attack2").addEventListener("click", () => {
+    clickSound();
     itemMod2();
     raceModHE2();
     newLife = player1.currenthealth - damageDone2;
     player1.currenthealth = newLife;
     document.getElementById("hpLeft1").setAttribute("value", newLife);
     logtxt = `You did ${damageDone2} to ${player1.name} ! HP left : ${player1.currenthealth}`
-
     logss();
     ending1();
     disable2();
@@ -234,6 +235,7 @@ document.getElementById("attack2").addEventListener("click", () => {
 // ***** FONCTION BOUTON DE HEAL *****
 
 document.getElementById("heal1").addEventListener("click", ()=> {
+    clickSound();
     itemMod1();
     newHeal1 = player1.currenthealth + healDone1;
     max = player1.maxHealth;
@@ -251,6 +253,7 @@ document.getElementById("heal1").addEventListener("click", ()=> {
 })
 
 document.getElementById("heal2").addEventListener("click", ()=> {
+    clickSound();
     itemMod2();
     newHeal2 = player2.currenthealth + healDone2;
     max = player2.maxHealth;
@@ -269,11 +272,13 @@ document.getElementById("heal2").addEventListener("click", ()=> {
 
 // ***** FONCTION BOUTON YIELD *****
 document.getElementById("yield1").addEventListener("click", () => {
+    clickSound();
     alert(`Did you really yield ${player1.name}? You're a disgrace for your ${player1.race} friends! Take your revenge now!`);
     window.location.reload();
 })
 
 document.getElementById("yield2").addEventListener("click", () => {
+    clickSound();
     alert(`Did you really yield ${player2.name}? You're a disgrace for your ${player2.race} friends! Take your revenge now!`);
     window.location.reload();
 })
@@ -288,6 +293,7 @@ function logss(){
 
 function ending1(){
     if (player1.currenthealth <= 0){ 
+        musicWin();
         alert(`${player1.name} LOST HAHA, Press ok to revenge`);
         window.location.reload();
     }
@@ -295,6 +301,7 @@ function ending1(){
 
 function ending2(){
     if (player2.currenthealth <= 0){ 
+        musicWin();
         alert(`${player2.name} LOST HAHA, Press ok to revenge`);
         window.location.reload();
     }
@@ -326,4 +333,32 @@ function persoImg2(){
     } else if (player2.race == "vampire"){
         document.getElementById("pixelChar2").setAttribute("src", "assets/images/pixel_vampire.gif")
     }
+}
+
+
+// ***** AJOUT DE MUSIC STYLEE ! *****
+
+function musicBattle(){
+
+    var audioBattle = document.getElementById("battleMusic");
+    audioBattle.volume = 0.5;
+    audioBattle.loop = true;
+    battleMusic.play();
+
+}
+
+function musicWin(){
+
+    var audioWin = document.getElementById("winMusic");
+    audioWin.volume = 0.5;
+    audioWin.play();
+
+}
+
+function clickSound(){
+
+    var buttonSound = document.getElementById("clickSound");
+    buttonSound.volume = 0.3;
+    buttonSound.play();
+
 }
