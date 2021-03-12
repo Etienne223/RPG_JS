@@ -266,7 +266,8 @@ select {
     justify-self: start;
     align-self: end;
     transform: scaleX(-1);
-    width: 50%;
+    width: 35%;
+    min-width: 100px;
     z-index: 2;
     visibility: hidden;
 }
@@ -276,7 +277,8 @@ select {
     grid-row: 2 / 4;
     justify-self: end;
     align-self: end;
-    width: 50%;
+    width: 35%;
+    min-width: 100px;
     z-index: 2;
     visibility: hidden;
 }

@@ -107,6 +107,7 @@ function itemMod2(){
         damageDone2 = x;
         h = player2.heal();
         healDone2 = h;
+        logdodge;
         if(rounded < 0.3){
             damageDone2 = 0;
             console.log("Dodged")

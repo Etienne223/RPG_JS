@@ -383,7 +383,8 @@ select {
       align-self: end;
   -webkit-transform: scaleX(-1);
           transform: scaleX(-1);
-  width: 50%;
+  width: 35%;
+  min-width: 100px;
   z-index: 2;
   visibility: hidden;
 }
@@ -400,7 +401,8 @@ select {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
-  width: 50%;
+  width: 35%;
+  min-width: 100px;
   z-index: 2;
   visibility: hidden;
 }
