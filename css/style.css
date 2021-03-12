@@ -296,15 +296,6 @@ main {
       justify-self: center;
 }
 
-.imgCharItem {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1 / 4;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
-}
-
 /* Buttons and dropdown */
 button {
   font-family: inherit;

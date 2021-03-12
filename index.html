@@ -23,61 +23,51 @@
             <img id="grass3" src="assets/images/grass.png" alt="grassBG">
             <div id="bgRepeat"></div>
         </section>
-            <section id="chooseChar">
-                <!-- <article id ="imgCharItem">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img src="" alt="">
-                    <img class ="itempic" src="assets/images/pixel_sword.png" alt="sword image">
-                    <img class ="itempic" src="assets/images/pixel_staff.png" alt="staff image">
-                    <img class ="itempic" src="assets/images/pixel_boots.png" alt="boots image">
-                    <img class ="itempic" src="assets/images/pixel_bow.png" alt="bow image"> -->
-                </article>
-                <article id ="char1">
-                    <h2 class="titleChoose">Player's 1 character</h2>
-                    <form id ="form1" action="">
+        <section id="chooseChar">
+            <article id ="char1">
+                <h2 class="titleChoose">Player's 1 character</h2>
+                <form id ="form1" action="">
+                    <label class="margpadform" for="race">Choose your race</label>
+                    <select class="margpadform" name="race" id="race1">
+                        <option value="human">Human</option>
+                        <option value="elve">Elve</option>
+                        <option value="orc">Orc</option>
+                        <option value="vampire">Vampire</option>
+                    </select>
+                    <label class="margpadform" for="items">Choose your weapon</label>
+                    <select class="margpadform" name="items" id="item1">
+                        <option value="sword">Excalibur</option>
+                        <option value="staff">The Wabbajack</option>
+                        <option value="boots">7-League Boots</option>
+                        <option value="bow">Appolo's bow</option>
+                    </select>
+                    <label class="margpadform" for="nameChar1">Name your hero</label>
+                    <input class="margpadform" id="nameChar1" type="text">
+                </form>
+            </article>
+            <article id ="char2">
+                <h2 class="titleChoose">Player's 2 character</h2>
+                    <form id="form2" action="">
                         <label class="margpadform" for="race">Choose your race</label>
-                        <select class="margpadform" name="race" id="race1">
+                        <select class="margpadform" name="race" id="race2">
                             <option value="human">Human</option>
                             <option value="elve">Elve</option>
                             <option value="orc">Orc</option>
                             <option value="vampire">Vampire</option>
                         </select>
                         <label class="margpadform" for="items">Choose your weapon</label>
-                        <select class="margpadform" name="items" id="item1">
-                            <option value="sword">Excalibur</option>
-                            <option value="staff">The Wabbajack</option>
-                            <option value="boots">7-League Boots</option>
-                            <option value="bow">Appolo's bow</option>
+                        <select class="margpadform" name="items" id="item2">
+                            <option value="sword">Galatine</option>
+                            <option value="staff">Jaina's staff</option>
+                            <option value="boots">Herme's Talaria</option>
+                            <option value="bow">Loki's Holy Dart</option>
                         </select>
-                        <label class="margpadform" for="nameChar1">Name your hero</label>
-                        <input class="margpadform" id="nameChar1" type="text">
+                        <label class="margpadform" for="nameChar2">Name your hero</label>
+                        <input class="margpadform" id="nameChar2" type="text">
                     </form>
-                </article>
-                <article id ="char2">
-                    <h2 class="titleChoose">Player's 2 character</h2>
-                        <form id="form2" action="">
-                            <label class="margpadform" for="race">Choose your race</label>
-                            <select class="margpadform" name="race" id="race2">
-                                <option value="human">Human</option>
-                                <option value="elve">Elve</option>
-                                <option value="orc">Orc</option>
-                                <option value="vampire">Vampire</option>
-                            </select>
-                            <label class="margpadform" for="items">Choose your weapon</label>
-                            <select class="margpadform" name="items" id="item2">
-                                <option value="sword">Galatine</option>
-                                <option value="staff">Jaina's staff</option>
-                                <option value="boots">Herme's Talaria</option>
-                                <option value="bow">Loki's Holy Dart</option>
-                            </select>
-                            <label class="margpadform" for="nameChar2">Name your hero</label>
-                            <input class="margpadform" id="nameChar2" type="text">
-                        </form>
-                </article>
-                <button id="start">Ready to Fight</button>
-            </section>  
+            </article>
+            <button id="start">Ready to Fight</button>
+        </section>  
         <section id="opponents1">
             <article id="carac1">
                 <img id="img1" src="" alt="">
@@ -92,7 +82,6 @@
             </article>
             <img id="pixelChar1" src="" alt="Character race gif">
         </section>
-     
         <section id="opponents2">
             <article id="carac2">
                 <img id="img2" src="" alt="">
@@ -134,3 +123,15 @@
     <script src="js/gamelogic.js"></script>
 </body>
 </html>
+
+
+<article id ="imgCharItem">
+    <!--  <img src="" alt="">
+     <img src="" alt="">
+     <img src="" alt="">
+     <img src="" alt=""> -->
+    <!-- <img class ="itempic" src="assets/images/pixel_sword.png" alt="sword image">
+     <img class ="itempic" src="assets/images/pixel_staff.png" alt="staff image">
+     <img class ="itempic" src="assets/images/pixel_boots.png" alt="boots image">
+     <img class ="itempic" src="assets/images/pixel_bow.png" alt="bow image"> -->
+ </article>
