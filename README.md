@@ -41,7 +41,7 @@ Reminder for later : I know how to design mobile first so next time I'll be doin
 
 ### Desktop
 
-![LightHouseDesktop](assets/images/LighHouseDesk.png)
+![LightHouseDesktop](assets/images/LightHouseDesk.png)
 
 ### Mobile
 
