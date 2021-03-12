@@ -33,6 +33,7 @@ function raceModHE1(){
         if (rounded < 0.2){
         console.log("Dodge");
         player1.currenthealth = player1.currenthealth - (damageDone1 / 2);
+        document.getElementById("hpLeft1").setAttribute("value", player1.currenthealth)
         damageDone1 = 0;   
         return damageDone1;
         }
@@ -52,6 +53,7 @@ function raceModHE2(){
             console.log("Dodge");
             player2.currenthealth = player2.currenthealth - (damageDone2 / 2);
             damageDone2 = 0;   
+            document.getElementById("hpLeft2").setAttribute("value", player2.currenthealth)
             return damageDone2;
         }
     }
