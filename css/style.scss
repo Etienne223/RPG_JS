@@ -201,6 +201,11 @@ main {
     }
 }
 
+.imgCharItem {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+}
+
 /* Buttons and dropdown */
 button {
     font-family: inherit;

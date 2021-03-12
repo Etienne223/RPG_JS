@@ -371,6 +371,6 @@ function clickSoundHeal(){
     buttonSound.volume = 0.2;
     buttonSound.play();
     var healSound = document.getElementById("soundHeal");
-    healSound.volume = 0.2;
+    healSound.volume = 0.4;
     healSound.play();
 }
