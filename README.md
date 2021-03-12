@@ -45,4 +45,4 @@ Reminder for later : I know how to design mobile first so next time I'll be doin
 
 ### Mobile
 
-![LightHouseMob](assets/images/LighHouseMob.png)
+![LightHouseMob](assets/images/LightHouseMob.png)
