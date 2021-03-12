@@ -274,13 +274,13 @@ document.getElementById("heal2").addEventListener("click", ()=> {
 
 // ***** FONCTION BOUTON YIELD *****
 document.getElementById("yield1").addEventListener("click", () => {
-    clickSound();
+    
     alert(`Did you really yield ${player1.name}? You're a disgrace for your ${player1.race} friends! Take your revenge now!`);
     window.location.reload();
 })
 
 document.getElementById("yield2").addEventListener("click", () => {
-    clickSound();
+    
     alert(`Did you really yield ${player2.name}? You're a disgrace for your ${player2.race} friends! Take your revenge now!`);
     window.location.reload();
 })
