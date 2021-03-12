@@ -341,7 +341,7 @@ function persoImg2(){
 function musicBattle(){
 
     var audioBattle = document.getElementById("battleMusic");
-    audioBattle.volume = 0.5;
+    audioBattle.volume = 0.4;
     audioBattle.loop = true;
     battleMusic.play();
 
@@ -358,7 +358,7 @@ function musicWin(){
 function clickSound(){
 
     var buttonSound = document.getElementById("clickSound");
-    buttonSound.volume = 0.3;
+    buttonSound.volume = 0.2;
     buttonSound.play();
 
 }
